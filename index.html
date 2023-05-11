@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width"> -->
+    <meta content="width=device-width,minimum-scale=1.0" name="viewport">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1"> -->
+    <link rel="stylesheet" href="style.css">
+	<title>Cafe FORE</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{      
+            font-family: 'Jost', sans-serif;
+        }
+    </style>    
+    <script src="https://kit.fontawesome.com/ad06c7c185.js" crossorigin="anonymous"></script>
+    
+    
+    <link rel="icon" href="/images/logo.png">
+    
+</head>
+<body>
+    <form action="/charge" method="post" id="payment-form" >
+  
+    
+        <div class="form-row top-row">
+            <div id="amount" class="field card-number">
+            <input name="amount" placeholder="Amount">
+            </div>
+        </div>
+
+        <div class="form-row top-row">
+            <div id="card-number" class="field card-number"></div>
+            <div class="input-errors" id="card-number-errors" role="alert"></div>
+        </div>
+
+        <div class="form-row">
+            <div id="card-date" class="field third-width"></div>
+            <div class="input-errors" id="card-date-errors" role="alert"></div>
+        </div>
+        
+        <div class="form-row">
+            <div id="card-cvv" class="field third-width"></div>
+            <div class="input-errors" id="card-cvv-errors" role="alert"></div>
+        </div>
+            
+        <div class="form-row">
+            <div id="card-postal-code" class="field third-width"></div>
+            <div class="input-errors" id="card-postal-code-errors" role="alert"></div>
+        </div>
+            
+        <div id="card-response" role="alert"></div>
+            
+    
+    </form>
+
+        <div class="button-container">
+            <button class="submit_payment">Submit Payment</button>
+            <button class="submit_payment_test">get_charges</button>
+            <button class="submit_refund_test">Refund</button>
+        </div>
+
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+    <script src="https://checkout.sandbox.dev.clover.com/sdk.js"></script>
+    <script type="module" src="index.js"></script>
+   
+
+    
+</body>
+</html>
